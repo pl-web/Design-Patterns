@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function createUser(role) {
+      function User(options) {
+        this.name = options.name
+        this.views = options.views
+      }
+      switch (role) {
+        case 'superAdmin':
+          return new User({
+            name: 'superAdmin',
+            views: [1,2,3,4,5]
+          })
+        case 'admin':
+          return new User({
+            name: 'admin',
+            views: [1,2,3,]
+          })
+        case 'commonAdmin':
+          return new User({
+            name: 'commonAdmin',
+            views: [1]
+          })
+        default:
+          return new User({
+            name: '',
+            views: []
+          })
+      }
+    }
+  </script>
+</body>
+
+</html>
